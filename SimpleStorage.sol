@@ -9,7 +9,7 @@ contract SimpleStorage {
     struct People {
       uint256 favNumber;
       string name;
-    }
+    } 
 
     People[] public peopleList;
 
