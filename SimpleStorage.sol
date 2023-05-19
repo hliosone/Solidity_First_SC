@@ -14,9 +14,8 @@ contract SimpleStorage {
     People[] public peopleList;
 
 
-    function store(uint256 favNum) public {
+    function store(uint256 favNum) public virtual {
       favNumber = favNum;
-      //retrieve();
     }
 
     //pure
