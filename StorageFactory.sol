@@ -6,9 +6,17 @@ import "./SimpleStorage.sol";
 contract StorageFactory {
     //simpleStorage variable is a contract type
     //So default value is 0x000.......
-    SimpleStorage public simpleStorage;
+    SimpleStorage[] public simpleStorage;
 
     function createSimpleContract() public {
-        simpleStorage = new SimpleStorage();
+        simpleStorage.push(new SimpleStorage());
+    }
+
+    function sfStore(uint256 _storageIndex, uint256 storageNumber) public {
+        simpleStorage[_storageIndex].store(storageNumber);
+    }
+
+    function sfRetrieve(uint256 _storageIndex) public view returns (uint256){
+        return simpleStorage[_storageIndex].retrieve();
     }
 }
