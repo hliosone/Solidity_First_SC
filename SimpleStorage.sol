@@ -7,6 +7,7 @@ contract SimpleStorage {
 
     //Dictionnary to map name to value
   mapping (string => uint256) public nameToFavNum;
+  
     struct People {
       uint256 favNumber;
       string name;
