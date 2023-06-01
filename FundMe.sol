@@ -34,4 +34,11 @@ contract FundMe{
         return ethAmountInUsd;
     }
 
+    function ethInGwei (uint256 ethAmount) public pure returns (uint256){
+        return (ethAmount / 1e10);
+    }
+
+    function gweiInEth (uint256 gweiAmount) public pure returns (uint256){
+        return (gweiAmount * 1e10);
+    }
 }
