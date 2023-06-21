@@ -16,7 +16,7 @@ contract SimpleStorage {
     //Array of People objects
     People[] public peopleList;
 
-
+    //store the new value of the favNumber
     function store(uint256 favNum) public virtual {
       favNumber = favNum;
     }
@@ -31,6 +31,7 @@ contract SimpleStorage {
       return favNumber;
     }
 
+    //add a person to an array and do the mapping 
     function addPerson(string memory _name, uint256 _favNumber) public {
       peopleList.push(People(_favNumber, _name));
       nameToFavNum[_name] = _favNumber;
